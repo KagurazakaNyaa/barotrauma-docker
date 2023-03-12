@@ -1,0 +1,21 @@
+version: '3.9'
+
+services:
+  dedicated-server:
+    image: kagurazakanyaa/barotrauma:latest
+    build:
+      context: .
+    restart: unless-stopped
+    network_mode: bridge
+    environment:
+      - LANGUAGE=English
+      - SERVER_NAME=test
+      - SERVER_MAX_PLAYERS=10
+      - GAME_PORT=27015
+      - QUERY_PORT=27016
+      - PASSWORD=test
+      - IS_PUBLIC=False
+      - OWNER_STEAMNAME=test
+      - OWNER_STEAMID=123456
+    volumes:
+      - ./data:/data
