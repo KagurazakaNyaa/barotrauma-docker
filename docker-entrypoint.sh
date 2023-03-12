@@ -34,8 +34,8 @@ fi
 if [[ ! -z ${SERVER_NAME} ]];then
     xmlstarlet edit --pf --ps --inplace --update '//serversettings/@name' -v "${SERVER_NAME}" serversettings.xml
 fi
-if [[ ! -z ${SERVER_MAX_PLAYERS} ]];then
-    xmlstarlet edit --pf --ps --inplace --update '//serversettings/@MaxPlayers' -v ${SERVER_MAX_PLAYERS} serversettings.xml
+if [[ ! -z ${MAX_PLAYERS} ]];then
+    xmlstarlet edit --pf --ps --inplace --update '//serversettings/@MaxPlayers' -v ${MAX_PLAYERS} serversettings.xml
 fi
 if [[ ! -z ${GAME_PORT} ]];then
     xmlstarlet edit --pf --ps --inplace --update '//serversettings/@port' -v ${GAME_PORT} serversettings.xml

@@ -14,7 +14,7 @@ RUN timeout 10 ./DedicatedServer || exit 0 # create config files
 
 ENV LANGUAGE=
 ENV SERVER_NAME=
-ENV SERVER_MAX_PLAYERS=
+ENV MAX_PLAYERS=
 ENV GAME_PORT=
 ENV QUERY_PORT=
 ENV PASSWORD=

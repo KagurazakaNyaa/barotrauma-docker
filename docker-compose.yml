@@ -10,7 +10,7 @@ services:
     environment:
       - LANGUAGE=English
       - SERVER_NAME=test
-      - SERVER_MAX_PLAYERS=10
+      - MAX_PLAYERS=10
       - GAME_PORT=27015
       - QUERY_PORT=27016
       - PASSWORD=test
