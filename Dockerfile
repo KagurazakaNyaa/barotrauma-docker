@@ -28,4 +28,4 @@ VOLUME [ "/data" ]
 
 ENTRYPOINT [ "/docker-entrypoint.sh" ]
 
-CMD [ "DedicatedServer" ]
+CMD [ "./DedicatedServer" ]
