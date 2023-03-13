@@ -18,7 +18,7 @@ if [[ ! -d /data/config/Data ]];then
 else
     rm -rf Data
 fi
-mkdir -p Submarines
+mkdir -p Submarines '~/.local/share/Daedalic Entertainment GmbH/Barotrauma'
 rm -rf LocalMods
 ln -sf /data/config/config_player.xml config_player.xml
 ln -sf /data/config/serversettings.xml serversettings.xml
