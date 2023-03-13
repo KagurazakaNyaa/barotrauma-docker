@@ -18,14 +18,14 @@ if [[ ! -d /data/config/Data ]];then
 else
     rm -rf Data
 fi
-mkdir -p Submarines '~/.local/share/Daedalic Entertainment GmbH/Barotrauma'
+mkdir -p Submarines '/root/.local/share/Daedalic Entertainment GmbH/Barotrauma'
 rm -rf LocalMods
 ln -sf /data/config/config_player.xml config_player.xml
 ln -sf /data/config/serversettings.xml serversettings.xml
 ln -sf /data/config/Data Data
 ln -sf /data/mods LocalMods
-if [[ ! -L '~/.local/share/Daedalic Entertainment GmbH/Barotrauma/Multiplayer' ]];then
-    ln -sf /data/saves '~/.local/share/Daedalic Entertainment GmbH/Barotrauma/Multiplayer'
+if [[ ! -L '/root/.local/share/Daedalic Entertainment GmbH/Barotrauma/Multiplayer' ]];then
+    ln -sf /data/saves '/root/.local/share/Daedalic Entertainment GmbH/Barotrauma/Multiplayer'
 fi
 if [[ ! -L Submarines/Added ]];then
     ln -sf /data/submarines Submarines/Added
