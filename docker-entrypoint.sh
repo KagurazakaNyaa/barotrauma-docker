@@ -18,14 +18,18 @@ if [[ ! -d /data/config/Data ]];then
 else
     rm -rf Data
 fi
-mkdir -p 'Daedalic Entertainment GmbH/Barotrauma' Submarines
+mkdir -p Submarines
 rm -rf LocalMods
 ln -sf /data/config/config_player.xml config_player.xml
 ln -sf /data/config/serversettings.xml serversettings.xml
 ln -sf /data/config/Data Data
 ln -sf /data/mods LocalMods
-ln -sf /data/saves 'Daedalic Entertainment GmbH/Barotrauma/Multiplayer'
-ln -sf /data/submarines Submarines/Added
+if [[ ! -L '~/.local/share/Daedalic Entertainment GmbH/Barotrauma/Multiplayer' ]];then
+    ln -sf /data/saves '~/.local/share/Daedalic Entertainment GmbH/Barotrauma/Multiplayer'
+fi
+if [[ ! -L Submarines/Added ]];then
+    ln -sf /data/submarines Submarines/Added
+fi
 
 if [[ ! -z ${LANGUAGE} ]];then
     xmlstarlet edit --pf --ps --inplace --update '//config/@language' -v "${LANGUAGE}" config_player.xml
