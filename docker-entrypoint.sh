@@ -67,4 +67,6 @@ if [[ ! -z ${OWNER_STEAMNAME} ]];then
         Data/clientpermissions.xml
 fi
 
+export LD_LIBRARY_PATH=/opt/barotrauma/linux64:$LD_LIBRARY_PATH
+
 exec $@

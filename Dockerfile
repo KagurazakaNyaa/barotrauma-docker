@@ -8,7 +8,7 @@ WORKDIR /opt/barotrauma
 
 RUN steamcmd +force_install_dir "/opt/barotrauma" +login anonymous +app_update 1026340 validate +quit
 
-RUN mkdir -p /root/.steam/sdk64 && mkdir -p '/root/.local/share/Daedalic Entertainment GmbH/Barotrauma' && ln -s /opt/barotrauma/linux64/steamclient.so ~/.steam/sdk64/steamclient.so
+RUN mkdir -p '/root/.local/share/Daedalic Entertainment GmbH/Barotrauma'
 
 RUN timeout 10 ./DedicatedServer || exit 0 # create config files
 
