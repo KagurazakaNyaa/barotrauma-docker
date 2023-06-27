@@ -2,6 +2,9 @@
 version=$(curl --silent "https://api.steamcmd.net/v1/info/1026340" | jq '.data."1026340".depots.branches.public.buildid' -r)
 currentversion=$(cat currentversion)
 echo "currentversion:$currentversion version:$version"
+if [[ -z "${version}" ]]; then
+    exit
+fi
 echo $version > currentversion
 if [[ "$currentversion" == "$version" ]]; then
     exit
